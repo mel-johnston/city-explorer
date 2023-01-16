@@ -2,11 +2,6 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
 
 .App-header {
   background-color: #282c34;
@@ -17,6 +12,7 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  padding: 1rem;
 }
 
 .city-form {
@@ -48,4 +44,14 @@
   padding: .75rem;
   border-radius: 10px;
   font-size: 1rem;
+}
+
+.error-message {
+  color: red;
+  padding: 1rem;
+  font-size: 1.25rem;
+}
+
+.error-message img {
+  width: 500px;
 }

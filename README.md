@@ -33,6 +33,8 @@ Actual time needed to complete:
 
 ## Credit and Collaborations
 
+Thanks to Audrey for showing us https://httpcats.com/!
+
 Favicon: <a href="https://www.flaticon.com/free-icons/map-location" title="map location icons">Map location icons created by Sergei Kokota - Flaticon</a>
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

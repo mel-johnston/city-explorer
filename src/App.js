@@ -32,9 +32,14 @@ class App extends React.Component {
         displayMap: true,
         isError: false
       })
-    } catch (error){
+    } catch (error) {
       console.log(error);
-      this.setState({displayMap: false, isError: true, errorMessage: error.message})
+      this.setState({
+        displayMap: false,
+        isError: true,
+        errorMessage: error.response.status
+      })
+    
     }
   }
 
@@ -51,8 +56,12 @@ class App extends React.Component {
           getCityData={this.getCityData}
           cityMap={this.state.cityMap}
         />
-        {this.state.isError === true && 
-        <p>{this.state.errorMessage}</p>}
+        <div className='error-message'>
+
+          {this.state.isError === true &&
+            <img alt="{this.state.errorMessage}" src={`https://httpcats.com/${this.state.errorMessage}.jpg`} />
+          }
+        </div>
       </div>
     );
   }
