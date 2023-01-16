@@ -17,19 +17,20 @@
 <!-- What are the steps that a user must take in order to build this app on their own machine and get it running? -->
 
 ## Architecture
-<!-- Provide a detailed description of the application design. What technologies (languages, libraries, etc) you're using, and any other relevant design information. -->
+
+[Process](./Process.PNG)
 
 ## Change Log
 
-Name of feature: 
+Name of feature: Asynchronous code, and APIs
 
-Estimate of time needed to complete: 
+Estimate of time needed to complete: 6 hours
 
-Start time: 
+Start time: 1300
 
-Finish time: 
+Finish time: 1800
 
-Actual time needed to complete: 
+Actual time needed to complete: 5 hours
 
 ## Credit and Collaborations
 
