@@ -1,16 +1,14 @@
 import React from 'react';
 import './App.css';
 import axios from 'axios';
-import Card from 'react-bootstrap/Card';
-import ListGroup from 'react-bootstrap/ListGroup';
-
+import CityForm from './Components/CityForm';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       city: '',
-      cityData: []
+      cityData: {}
     }
   }
 
@@ -25,13 +23,13 @@ class App extends React.Component {
 
     let url = `https://us1.locationiq.com/v1/search?key=${process.env.REACT_APP_LOCATIONIQ_API_KEY}&q=${this.state.city}&format=json`;
 
-    let cityDataFromAxious = await axios.get(url)
+    let cityData = await axios.get(url)
+
     this.setState({
-      cityData: cityDataFromAxious.data[0]
+      cityData: cityData.data[0],
+      cityMap: `https://maps.locationiq.com/v3/staticmap?key=${process.env.REACT_APP_LOCATIONIQ_API_KEY}&markers=${cityData.data[0].lat},${cityData.data[0].lon}&size=500x500&zoom=10&markers=icon:large-green-cutout`
     })
-
   }
-
 
   render() {
     return (
@@ -39,18 +37,12 @@ class App extends React.Component {
         <header className="App-header">
           <h1>City Explorer</h1>
         </header>
-
-        <form className="city-form" onSubmit={this.getCityData}>
-          <input placeholder="Choose your city" type="text" onInput={this.handleInput} />
-          <button type="submit">Explore!</button>
-        </form>
-
-        <Card>
-          
-          <Card.Title>{this.state.cityData.display_name}</Card.Title>
-          <ListGroup.Item>{this.state.cityData.lat}</ListGroup.Item>
-          <ListGroup.Item>{this.state.cityData.lon}</ListGroup.Item>
-        </Card>
+        <CityForm
+          cityData={this.state.cityData}
+          handleInput={this.handleInput}
+          getCityData={this.getCityData}
+          cityMap={this.state.cityMap}
+        />
       </div>
     );
   }
