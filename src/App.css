@@ -50,8 +50,15 @@
   color: red;
   padding: 1rem;
   font-size: 1.25rem;
+  width: 600px;
+  margin: 0 auto;
 }
 
 .error-message img {
-  width: 500px;
+  width: 100%;
+}
+
+.error-alert {
+  margin: 1rem 0rem;
+  width: 100%;
 }

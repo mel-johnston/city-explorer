@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import axios from 'axios';
 import CityForm from './Components/CityForm';
+import Error from './Components/Error';
 
 class App extends React.Component {
   constructor(props) {
@@ -11,7 +12,8 @@ class App extends React.Component {
       cityData: {},
       displayMap: false,
       isError: false,
-      errorMessage: ''
+      errorMessage: '',
+      errorNumber: ''
     }
   }
 
@@ -37,9 +39,10 @@ class App extends React.Component {
       this.setState({
         displayMap: false,
         isError: true,
-        errorMessage: error.response.status
+        errorMessage: error.message,
+        errorNumber: error.response.status
       })
-    
+
     }
   }
 
@@ -56,12 +59,13 @@ class App extends React.Component {
           getCityData={this.getCityData}
           cityMap={this.state.cityMap}
         />
-        <div className='error-message'>
-
-          {this.state.isError === true &&
-            <img alt="{this.state.errorMessage}" src={`https://httpcats.com/${this.state.errorMessage}.jpg`} />
-          }
-        </div>
+        
+        <Error
+          getCityData={this.getCityData} 
+          isError={this.state.isError}
+          errorMessage={this.state.errorMessage}
+          errorNumber={this.state.errorNumber}
+          />
       </div>
     );
   }
