@@ -18,6 +18,7 @@
 ## Architecture
 
 [Process](./Process.PNG)
+[Process 2](./Process2.PNG)
 
 ## Change Log
 
