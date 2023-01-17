@@ -57,6 +57,12 @@
 
 .map-card {
   font-family: 'Russo One', sans-serif;
+
+}
+
+.Weather {
+  width: 50%;
+  margin: 2rem auto;
 }
 
 .error-message {

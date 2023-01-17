@@ -14,11 +14,11 @@
 >As a user, I want clear messages if something goes wrong so I know if I need to make any changes or try again in a different manner.
 
 ## Getting Started
-<!-- What are the steps that a user must take in order to build this app on their own machine and get it running? -->
 
 ## Architecture
 
 [Process](./Process.PNG)
+[Process 2](./Process2.PNG)
 
 ## Change Log
 
@@ -33,6 +33,8 @@ Finish time: 1800
 Actual time needed to complete: 5 hours
 
 ## Credit and Collaborations
+
+Collaboration with Tyler Bennett 
 
 Thanks to Audrey for showing us https://httpcats.com/!
 
