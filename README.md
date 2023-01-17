@@ -36,6 +36,6 @@ Actual time needed to complete: 5 hours
 
 Thanks to Audrey for showing us https://httpcats.com/!
 
-Favicon: <a href="https://www.flaticon.com/free-icons/map-location" title="map location icons">Map location icons created by Sergei Kokota - Flaticon</a>
+Favicon: <a target="_blank" href="https://icons8.com/icon/13794/map-marker">Map Marker</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
