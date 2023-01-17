@@ -14,7 +14,6 @@
 >As a user, I want clear messages if something goes wrong so I know if I need to make any changes or try again in a different manner.
 
 ## Getting Started
-<!-- What are the steps that a user must take in order to build this app on their own machine and get it running? -->
 
 ## Architecture
 
