@@ -12,7 +12,7 @@ class CityForm extends React.Component {
           <button type="submit">Explore!</button>
         </form>
         {this.props.displayMap === true &&
-          <Card style={{ width: "50%", margin: "0 auto" }}>
+          <Card className="map-card"style={{ width: "50%", margin: "0 auto" }}>
             <Card.Body>
               <Card.Title>{this.props.cityData.display_name}</Card.Title>
               <Card.Text>Lat: {this.props.cityData.lat} Long: {this.props.cityData.lon}</Card.Text>

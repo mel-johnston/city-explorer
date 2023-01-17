@@ -30,7 +30,7 @@ class App extends React.Component {
       let cityData = await axios.get(url)
       this.setState({
         cityData: cityData.data[0],
-        cityMap: `https://maps.locationiq.com/v3/staticmap?key=${process.env.REACT_APP_LOCATIONIQ_API_KEY}&markers=${cityData.data[0].lat},${cityData.data[0].lon}&size=500x500&zoom=10&markers=icon:large-green-cutout`,
+        cityMap: `https://maps.locationiq.com/v3/staticmap?key=${process.env.REACT_APP_LOCATIONIQ_API_KEY}&markers=${cityData.data[0].lat},${cityData.data[0].lon}|icon:tiny-green-cutout&size=500x500&zoom=10`,
         displayMap: true,
         isError: false
       })
