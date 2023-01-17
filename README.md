@@ -34,6 +34,8 @@ Actual time needed to complete: 5 hours
 
 ## Credit and Collaborations
 
+Collaboration with Tyler Bennett 
+
 Thanks to Audrey for showing us https://httpcats.com/!
 
 Favicon: <a target="_blank" href="https://icons8.com/icon/13794/map-marker">Map Marker</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
