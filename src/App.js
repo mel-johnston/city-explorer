@@ -26,16 +26,11 @@ class App extends React.Component {
     })
   }
 
-  getWeather = async (e) => {
+  getWeather = async (lat, lon) => {
     try {
-      let weatherData = await axios.get(`${process.env.REACT_APP_SERVER}/weather?city_name=${this.state.city}`);
+      let weatherData = await axios.get(`${process.env.REACT_APP_SERVER}/weather?city_name=${this.state.city}&lat=${lat}&lon=${lon}`);
       this.setState({
-        weatherDateOne: weatherData.data.dateTimeOne,
-        weatherTypeOne: weatherData.data.descriptionOne,
-        weatherDateTwo: weatherData.data.dateTimeTwo,
-        weatherTypeTwo: weatherData.data.descriptionTwo,
-        weatherDateThree: weatherData.data.dateTimeThree,
-        weatherTypeThree: weatherData.data.descriptionThree,
+        weatherData: weatherData.data,
         weatherResponse: true
       })
     } catch (error) {
@@ -56,7 +51,8 @@ class App extends React.Component {
         cityMap: `https://maps.locationiq.com/v3/staticmap?key=${process.env.REACT_APP_LOCATIONIQ_API_KEY}&markers=${cityData.data[0].lat},${cityData.data[0].lon}|icon:tiny-green-cutout&size=500x500&zoom=10`,
         displayMap: true,
         isError: false
-      })
+      }); this.getWeather(cityData.data[0].lat, cityData.data[0].lon);
+
     } catch (error) {
       console.log(error);
       this.setState({
@@ -67,7 +63,6 @@ class App extends React.Component {
       })
 
     }
-    this.getWeather()
   }
 
 
@@ -94,14 +89,7 @@ class App extends React.Component {
         />
         {this.state.weatherResponse === true &&
           <Weather
-            getWeather={this.getWeather}
             weatherData={this.state.weatherData}
-            weatherDateOne={this.state.weatherDateOne}
-            weatherTypeOne={this.state.weatherTypeOne}
-            weatherDateTwo={this.state.weatherDateTwo}
-            weatherTypeTwo={this.state.weatherTypeTwo}
-            weatherDateThree={this.state.weatherDateThree}
-            weatherTypeThree={this.state.weatherTypeThree}
           />
         }
 
