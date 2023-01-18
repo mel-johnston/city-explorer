@@ -1,19 +1,17 @@
 import React from 'react';
-
+import Card from 'react-bootstrap/Card';
 
 class Movies extends React.Component {
 
   render() {
     return (
-      <div>
-        <h1>Movies:</h1>
-
+      <div className='Movies-card'>
         {this.props.movieData.map(movie => {
           return (
-            <div>
-              <div>{movie.title}</div>
-              <div>{movie.overview}</div>
-            </div>
+            <Card style={{ margin: '1rem' }} >
+              <Card.Title>{movie.title}</Card.Title>
+              <Card.Body>{movie.overview}</Card.Body>
+            </Card>
           )
         })}
 
