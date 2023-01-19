@@ -47,7 +47,6 @@ class App extends React.Component {
   getMovies = async () => {
     try {
       let movieData = await axios.get(`${process.env.REACT_APP_SERVER}/movie?city_name=${this.state.city}`);
-      
       this.setState({
         movieData: movieData.data,
         movieResponse: true
@@ -59,8 +58,6 @@ class App extends React.Component {
       })
     }
   }
-
-
 
   getCityData = async (e) => {
     try {
@@ -87,8 +84,6 @@ class App extends React.Component {
 
     }
   }
-
-
 
   render() {
     return (
