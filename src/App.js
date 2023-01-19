@@ -73,7 +73,7 @@ class App extends React.Component {
         displayMap: true,
         isError: false
       });
-      // this.getWeather(cityData.data[0].lat, cityData.data[0].lon);
+      this.getWeather(cityData.data[0].lat, cityData.data[0].lon);
       this.getMovies();
 
     } catch (error) {
